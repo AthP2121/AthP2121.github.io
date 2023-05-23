@@ -1,0 +1,117 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #f2f2f2;
+    background-color: #2b2b2b;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.menu a:hover {
+    color: #c1c1c1;
+}
+
+section {
+    padding: 20px;
+}
+
+#intro {
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 20px;
+}
+
+#gallery {
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 20px;
+}
+
+#instagram-feed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#instagram-feed img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#contact {
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    color: #f2f2f2;
+    font-size: 1.1em;
+}
+
+form button {
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    color: #f2f2f2;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #444;
+}
+
+#instagram-feed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px;
+}
+
+#instagram-feed img {
+    max-width: calc(100% / 3 - 40px); /* Here 40px is twice the margin (20px on each side of an image) */
+    height: auto;
+    margin: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
