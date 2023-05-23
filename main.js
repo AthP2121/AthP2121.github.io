@@ -1,64 +1,29 @@
-// window.onload = function() {
-//     fetch('https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=IGQVJWeUgyamd0ZADBNRDhXU3dRX3NYbWJrM2s5T0VVa2o0YnU4Q0puZAHJmbUp3cTRNN184dkxrSWVMckt3QmNJME13MXdMNHNkZA1FsQUtLY084MzBRNGN1T1FFSFdNMF8yRk9wXzU3dk5EZAUVpRHJDRAZDZD')
-//     .then(response => response.json())
-//     .then(data => {
-//         const feed = document.getElementById('instagram-feed');
-//         data.data.forEach(item => {
-//             const img = document.createElement('img');
-//             img.src = item.media_url;
-//             img.alt = item.caption;
-//             img.onclick = function() { window.location.href = item.permalink; };
-//             feed.appendChild(img);
-//         });
-//     })
-//     .catch(error => console.error('Error:', error));
-// }
 window.onload = function() {
-    fetch('https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=IGQVJWeUgyamd0ZADBNRDhXU3dRX3NYbWJrM2s5T0VVa2o0YnU4Q0puZAHJmbUp3cTRNN184dkxrSWVMckt3QmNJME13MXdMNHNkZA1FsQUtLY084MzBRNGN1T1FFSFdNMF8yRk9wXzU3dk5EZAUVpRHJDRAZDZD')
-      .then(response => response.json())
-      .then(data => {
-        const feed = document.getElementById('instagram-feed');
-        data.data.forEach(item => {
-        if (item.media_type === 'IMAGE') {  // This line ensures only image types are processed.
-            const img = document.createElement('img');
-            img.src = item.media_url;
-            img.alt = item.caption;
-            img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)'; // Adjust the size here based on window size
-            img.onclick = function() { window.location.href = item.permalink; };
-            feed.appendChild(img);
-          }
-        });
-      })
-      .catch(error => console.error('Error:', error));
-  }
-  
-  window.onresize = function() {
-    const images = document.querySelectorAll('#instagram-feed img');
-    images.forEach(img => {
-      img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)'; // Adjust the size here based on window size
-    });
-  }
-  
-// window.onload = function() {
-//     fetch('https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=IGQVJWeUgyamd0ZADBNRDhXU3dRX3NYbWJrM2s5T0VVa2o0YnU4Q0puZAHJmbUp3cTRNN184dkxrSWVMckt3QmNJME13MXdMNHNkZA1FsQUtLY084MzBRNGN1T1FFSFdNMF8yRk9wXzU3dk5EZAUVpRHJDRAZDZD')
-//       .then(response => response.json())
-//       .then(data => {
-//         const feed = document.getElementById('instagram-feed');
-//         data.data.forEach(item => {
-//           const img = document.createElement('img');
-//           img.src = item.media_url;
-//           img.alt = item.caption;
-//           img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)'; // Adjust the size here based on window size
-//           img.onclick = function() { window.location.href = item.permalink; };
-//           feed.appendChild(img);
-//         });
-//       })
-//       .catch(error => console.error('Error:', error));
-  
-//   window.onresize = function() {
-//     const images = document.querySelectorAll('#instagram-feed img');
-//     images.forEach(img => {
-//       img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)'; // Adjust the size here based on window size
-//     });
-//   }
-  
+  const imageUrls = [
+    'https://share.icloud.com/photos/036hh6wr6ogc7Vq4udy9qaY3Q',
+    'https://share.icloud.com/photos/08elx3YyBSn8thl0QmDyBpvXw',
+    'https://share.icloud.com/photos/0042IMFPQkE9VSp6VTM12Eugw',
+    'https://share.icloud.com/photos/001FmV3IfjnDJPRLxk5H8w6uw',
+    'https://share.icloud.com/photos/00bmipjQ-0F3QMgykXVqu-vMA',
+    'https://share.icloud.com/photos/029g9PjTUEijObZurh0BBZjEg',
+    'https://share.icloud.com/photos/09558R5pLgiuO5JX7RKJyUThw',
+
+    // add more URLs as needed
+  ];
+
+  const feed = document.getElementById('instagram-feed');
+  imageUrls.forEach(url => {
+    const img = document.createElement('img');
+    img.src = url;
+    img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)';
+    img.onclick = function() { window.location.href = url; };
+    feed.appendChild(img);
+  });
+}
+
+window.onresize = function() {
+  const images = document.querySelectorAll('#instagram-feed img');
+  images.forEach(img => {
+    img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)';
+  });
+}
