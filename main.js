@@ -12,10 +12,12 @@ window.onload = function() {
     // add more filenames as needed
   ];
 
+  const repoUrl = 'https://raw.githubusercontent.com/YourGithubUsername/AthP2121.github.io/blob/main/';
+
   const feed = document.getElementById('instagram-feed');
   imageNames.forEach(name => {
     const img = document.createElement('img');
-    img.src = '/images/' + name;
+    img.src = repoUrl + name;
     img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)';
     feed.appendChild(img);
   });
@@ -27,5 +29,4 @@ window.onresize = function() {
     img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)';
   });
 }
-
 
