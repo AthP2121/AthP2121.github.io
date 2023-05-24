@@ -1,12 +1,13 @@
 window.onload = function() {
   const imageUrls = [
-    'https://share.icloud.com/photos/036hh6wr6ogc7Vq4udy9qaY3Q',
-    'https://share.icloud.com/photos/08elx3YyBSn8thl0QmDyBpvXw',
-    'https://share.icloud.com/photos/0042IMFPQkE9VSp6VTM12Eugw',
-    'https://share.icloud.com/photos/001FmV3IfjnDJPRLxk5H8w6uw',
-    'https://share.icloud.com/photos/00bmipjQ-0F3QMgykXVqu-vMA',
-    'https://share.icloud.com/photos/029g9PjTUEijObZurh0BBZjEg',
-    'https://share.icloud.com/photos/09558R5pLgiuO5JX7RKJyUThw',
+    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_1736.JPG',
+    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_1737.JPG',
+    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_7242.JPG',
+    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_7780.JPG',
+    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_7791.JPG',
+    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_7925.JPG',
+    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_1739.JPG',
+    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_1732.JPG',
 
     // add more URLs as needed
   ];
