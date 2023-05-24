@@ -1,23 +1,22 @@
 window.onload = function() {
-  const imageUrls = [
-    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_1736.JPG',
-    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_1737.JPG',
-    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_7242.JPG',
-    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_7780.JPG',
-    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_7791.JPG',
-    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_7925.JPG',
-    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_1739.JPG',
-    'https://github.com/AthP2121/AthP2121.github.io/blob/main/IMG_1732.JPG',
-
-    // add more URLs as needed
+  const imageNames = [
+    'IMG_1736.JPG',
+    'IMG_1736.JPG',
+    'IMG_1737.JPG',
+    'IMG_7242.JPG',
+    'IMG_7780.JPG',
+    'IMG_7791.JPG',
+    'IMG_7925.JPG',
+    'IMG_1739.JPG',
+    'IMG_1732.JPG',
+    // add more filenames as needed
   ];
 
   const feed = document.getElementById('instagram-feed');
-  imageUrls.forEach(url => {
+  imageNames.forEach(name => {
     const img = document.createElement('img');
-    img.src = url;
+    img.src = '/images/' + name;
     img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)';
-    img.onclick = function() { window.location.href = url; };
     feed.appendChild(img);
   });
 }
@@ -28,3 +27,5 @@ window.onresize = function() {
     img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)';
   });
 }
+
+
