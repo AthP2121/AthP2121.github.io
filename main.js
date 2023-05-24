@@ -1,6 +1,6 @@
 window.onload = function() {
   const imageNames = [
-    './IMG_1736.JPG',
+    'IMG_1736.JPG',
     './IMG_1736.JPG',
     './IMG_1737.JPG',
     './IMG_7242.JPG',
