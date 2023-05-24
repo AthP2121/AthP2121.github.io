@@ -1,14 +1,14 @@
 window.onload = function() {
   const imageNames = [
-    'IMG_1736.JPG',
-    'IMG_1736.JPG',
-    'IMG_1737.JPG',
-    'IMG_7242.JPG',
-    'IMG_7780.JPG',
-    'IMG_7791.JPG',
-    'IMG_7925.JPG',
-    'IMG_1739.JPG',
-    'IMG_1732.JPG',
+    './IMG_1736.JPG',
+    './IMG_1736.JPG',
+    './IMG_1737.JPG',
+    './IMG_7242.JPG',
+    './IMG_7780.JPG',
+    './IMG_7791.JPG',
+    './IMG_7925.JPG',
+    './IMG_1739.JPG',
+    './IMG_1732.JPG',
     // add more filenames as needed
   ];
 
