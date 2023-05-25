@@ -18,7 +18,14 @@ window.onload = function() {
   imageNames.forEach(name => {
     const img = document.createElement('img');
     img.src = repoUrl + name;
-    img.className = "grid-item";
+    img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)';
     feed.appendChild(img);
+  });
+}
+
+window.onresize = function() {
+  const images = document.querySelectorAll('#instagram-feed img');
+  images.forEach(img => {
+    img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)';
   });
 }
