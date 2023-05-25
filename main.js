@@ -14,19 +14,11 @@ window.onload = function() {
 
   const repoUrl = 'https://AthP2121.github.io/AthP2121.github.io/images/';
 
-  const feed = document.getElementById('instagram-feed');
+  const gallery = document.getElementById('image-gallery');
   imageNames.forEach(name => {
     const img = document.createElement('img');
     img.src = repoUrl + name;
-    img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)';
-    img.style.margin = '20px 0';
-    feed.appendChild(img);
-  });
-}
-
-window.onresize = function() {
-  const images = document.querySelectorAll('#instagram-feed img');
-  images.forEach(img => {
-    img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)';
+    img.className = "gallery-item";
+    gallery.appendChild(img);
   });
 }
