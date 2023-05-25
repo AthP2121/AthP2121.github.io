@@ -19,6 +19,7 @@ window.onload = function() {
     const img = document.createElement('img');
     img.src = repoUrl + name;
     img.style.width = window.innerWidth < 900 ? '100%' : 'calc(50% - 40px)';
+    img.style.margin = '20px 0';
     feed.appendChild(img);
   });
 }
