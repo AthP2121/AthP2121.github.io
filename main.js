@@ -12,7 +12,7 @@ window.onload = function() {
     // add more filenames as needed
   ];
 
-  const repoUrl = 'https://raw.githubusercontent.com/AthP2121/AthP2121.github.io/blob/main/';
+  const repoUrl = 'https://raw.githubusercontent.com/AthP2121/AthP2121.github.io/main/';
 
   const feed = document.getElementById('instagram-feed');
   imageNames.forEach(name => {
