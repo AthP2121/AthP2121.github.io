@@ -12,7 +12,7 @@ window.onload = function() {
     // add more filenames as needed
   ];
 
-  const repoUrl = 'https://AthP2121.github.io/AthP2121.github.io/images/';
+  const repoUrl = 'https://github.com/AthP2121/AthP2121.github.io/main/images/';
 
   const gallery = document.getElementById('image-gallery');
   imageNames.forEach(name => {
