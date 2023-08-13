@@ -31,15 +31,44 @@ main {
 }
 
 #image-gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     gap: 20px;
 }
 
 .gallery-item {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.gallery-item p {
+    text-align: center;
+    margin: 10px 0 5px;
+}
+
+.price-tag {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-weight: bold;
+    border-radius: 3px;
 }
 
 form {
